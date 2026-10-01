@@ -1,0 +1,30 @@
+{
+  "name": "atap-solar-wiki",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public, read-only research wiki for Malaysian solar PV (Solar ATAP, SELCO, NEM, ...).",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "dev": "next dev --port 38772",
+    "build": "next build",
+    "start": "next start --port ${PORT:-38772}",
+    "db:restore": "node scripts/restore.mjs",
+    "db:snapshot": "node scripts/snapshot.mjs",
+    "lint": "eslint app wiki-server scripts"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "pg": "^8.23.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "typescript": "5.9.3"
+  },
+  "type": "module"
+}
